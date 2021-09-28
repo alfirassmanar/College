@@ -21,7 +21,8 @@ public class LatihanSwitchCase_College {
         int pesan,sate,pilihan,total,harga,card;
         float pembayaran, kembali;
         String nama;
-  
+        
+       
         System.out.println("Untuk Pelanggan mohon hanya menginputkan angka saja :)");
         System.out.print("Masukkan nama anda                  :");
         nama = input.next();
@@ -189,10 +190,19 @@ public class LatihanSwitchCase_College {
             pembayaran = input.nextFloat();
             
             double kembalian = pembayaran - total;
-            System.out.println("Kembalian Anda : " + kembalian);
-            if(kembalian == 0){
+          
+            if(kembalian == total){
+                System.out.println("Kembalian Anda : " + kembalian);
                 System.out.println("Uang Anda Pass Silahkan Mampir Lagi :)");
-            }
+            } if (kembalian <= total){
+                System.out.println("Maaf Uang Anda Kurang");
+                System.out.print("Masukan Nominal Uang                  Rp: ");
+                pembayaran = input.nextFloat();
+                System.out.println("Kembalian Anda : " + kembalian);
+            } 
+            
+            
+            
     }
     
 }
